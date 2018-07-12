@@ -1,0 +1,45 @@
+{
+  "name": "queue-kit",
+  "version": "0.0.1",
+  "description": "Queues",
+  "main": "lib/Queue.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "nextgen-events": "^1.1.0",
+    "seventh": "^0.7.13"
+  },
+  "scripts": {
+    "test": "tea-time -R dot -O"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cronvel/queue-kit.git"
+  },
+  "keywords": [
+    "queue"
+  ],
+  "author": "Cédric Ronvel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cronvel/queue-kit/issues"
+  },
+  "config": {
+    "tea-time": {
+      "coverDir": [
+        "lib"
+      ]
+    }
+  },
+  "copyright": {
+    "title": "Queue Kit",
+    "years": [
+      2018
+    ],
+    "owner": "Cédric Ronvel"
+  }
+}

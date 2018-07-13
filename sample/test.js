@@ -27,10 +27,10 @@ queue.add( new Job( jobFn , { id: count ++ , timeout: 2000 } ) ) ;
 queue.add( new Job( jobFn , { id: count ++ , timeout: 300 } ) ) ;
 queue.add( new Job( jobFn , { id: count ++ , timeout: 300 } ) ) ;
 
-queue.on( 'stopped' , job => console.log( "Queue is stopped" ) ) ;
-queue.on( 'started' , job => console.log( "Queue is started" ) ) ;
-queue.on( 'idling' , job => console.log( "Queue is idling" ) ) ;
-queue.on( 'running' , job => console.log( "Queue is running" ) ) ;
+queue.on( 'stopped' , () => console.log( "Queue is stopped" ) ) ;
+queue.on( 'started' , () => console.log( "Queue is started" ) ) ;
+queue.on( 'idling' , () => console.log( "Queue is idling" ) ) ;
+queue.on( 'running' , () => console.log( "Queue is running" ) ) ;
 queue.on( 'jobStart' , job => console.log( "Starting job #" + job.data.id + " (" + job.data.timeout + "ms)" ) ) ;
 queue.on( 'jobDone' , job => console.log( "Done job #" + job.data.id + " (" + job.data.timeout + "ms)" ) ) ;
 

@@ -17,9 +17,14 @@ function jobFn( data ) {
 	return Promise.resolveTimeout( data.timeout ) ;
 }
 
+function dang( data ) {
+	return Promise.rejectTimeout( data.timeout , new Error( "Dang!" ) ) ;
+}
+
 var count = 0 ;
 
 queue.addJob( jobFn , { id: count ++ , timeout: 300 } ) ;
+queue.addJob( dang , { id: count ++ , timeout: 10 } ) ;
 queue.addJob( jobFn , { id: count ++ , timeout: 3000 } ) ;
 queue.addJob( jobFn , { id: count ++ , timeout: 300 } ) ;
 queue.addJob( jobFn , { id: count ++ , timeout: 300 } ) ;
@@ -36,6 +41,7 @@ queue.on( 'idling' , () => console.log( "Queue is idling" ) ) ;
 queue.on( 'running' , () => console.log( "Queue is running" ) ) ;
 queue.on( 'jobStart' , job => console.log( "Starting job #" + job.data.id + " (" + job.data.timeout + "ms)" ) ) ;
 queue.on( 'jobDone' , job => console.log( "Done job #" + job.data.id + " (" + job.data.timeout + "ms)" ) ) ;
+queue.on( 'jobError' , job => console.log( "ERROR in job #" + job.data.id + " (" + job.data.timeout + "ms)" , job.error ) ) ;
 queue.on( 'progress' , ( jobDone , jobInProgress , jobRemaining ) => console.log( "Progress" , jobDone , jobInProgress , jobRemaining ) ) ;
 
 queue.start() ;

@@ -57,6 +57,10 @@ setTimeout( () => {
 } , 15000 ) ;
 
 
-console.log( JSON.stringify( queue , (k,v) => v instanceof Promise ? undefined : v , '    ' ) ) ;
-
+/*
+var stringified = queue.stringify() ;
+console.log( "stringified:" , stringified ) ;
+var parsed = Queue.parse( stringified ) ;
+console.log( "parsed" , parsed ) ;
+*/
 

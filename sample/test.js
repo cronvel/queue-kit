@@ -56,3 +56,7 @@ setTimeout( () => {
 	queue.add( new Job( jobFn , { id: count ++ , timeout: 800 } ) ) ;
 } , 15000 ) ;
 
+
+console.log( JSON.stringify( queue , (k,v) => v instanceof Promise ? undefined : v , '    ' ) ) ;
+
+

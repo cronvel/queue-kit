@@ -1,6 +1,6 @@
 {
   "name": "queue-kit",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Queues!",
   "main": "lib/queueKit.js",
   "engines": {

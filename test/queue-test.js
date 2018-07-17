@@ -24,7 +24,7 @@
 	SOFTWARE.
 */
 
-"use strcit" ;
+"use strict" ;
 
 /* global describe, it, before, after */
 

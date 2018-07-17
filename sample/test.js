@@ -23,6 +23,7 @@ function dang( data ) {
 
 var count = 0 ;
 
+queue.addJob( "kj" , { id: count ++ , timeout: 300 } ) ;
 queue.addJob( jobFn , { id: count ++ , timeout: 300 } ) ;
 queue.addJob( dang , { id: count ++ , timeout: 10 } ) ;
 queue.addJob( jobFn , { id: count ++ , timeout: 3000 } ) ;

@@ -9,8 +9,7 @@ var Job = qKit.Job ;
 
 
 var queue = new Queue( {
-	concurrency: 3 ,
-//	cleanUpInterval: 5000
+	concurrency: 3
 } ) ;
 
 function jobFn( data ) {

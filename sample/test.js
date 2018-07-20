@@ -10,7 +10,8 @@ var Job = qKit.Job ;
 
 var queue = new Queue( {
 	concurrency: 3 ,
-	retryTimeout: 100
+	retryTimeout: 100 ,
+	retryTimeoutMultiplier: 1.5
 } ) ;
 
 function jobFn( data ) {

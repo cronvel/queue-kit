@@ -11,7 +11,11 @@ var Job = qKit.Job ;
 var queue = new Queue( {
 	concurrency: 3 ,
 	retryTimeout: 100 ,
-	retryTimeoutMultiplier: 1.5
+	retryTimeoutMultiplier: 1.5 ,
+	retryMax: 5 ,
+	hooks: {
+		removeFatalError: job => console.log( "Aborting job:" , job )
+	}
 } ) ;
 
 function jobFn( data ) {

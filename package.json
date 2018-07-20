@@ -10,7 +10,7 @@
     "test": "test"
   },
   "dependencies": {
-    "chain-lightning": "^0.2.0",
+    "chain-lightning": "^0.2.1",
     "nextgen-events": "^1.1.0",
     "seventh": "^0.7.13"
   },

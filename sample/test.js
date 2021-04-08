@@ -2,10 +2,13 @@
 
 "use strict" ;
 
-var Promise = require( 'seventh' ) ;
-var qKit = require( '..' ) ;
-var Queue = qKit.Queue ;
-var Job = qKit.Job ;
+
+
+const Promise = require( 'seventh' ) ;
+const qKit = require( '..' ) ;
+const Queue = qKit.Queue ;
+const Job = qKit.Job ;
+
 
 
 var queue = new Queue( {
